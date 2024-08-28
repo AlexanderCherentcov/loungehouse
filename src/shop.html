@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Магазин" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="shop">
+        <div class="shop__container">
+					<h1 class="shop__title">Магазин</h1>
+					<div class="shop__cart cart" tabindex="0">
+						<div class="cart__text">
+							<svg>
+								<use xlink:href="@img/icons/icons.svg#basket"></use>
+							</svg>
+							<span class="cart__quantity">0</span>
+						</div>
+						<div class="cart-content">
+							<ul class="cart-content__list" data-simplebar>
+							</ul>
+							<div class="cart-content__bottom">
+								<div class="cart-content__fullprice">
+									<span>Итого:</span>
+									<span class="fullprice">568 789 ₽</span>
+								</div>
+								<button class="cart-content__btn btn" data-graph-path="modal" data-graph-animation="fadeInUp">Перейти в корзину</button>
+							</div>
+						</div>
+					</div>
+          <div class="products-content grid-container">
+            <ul class="products-grid">
+              <!--Карточка товара-->
+              <li class="products-grid__item">
+                <article class="product card">
+                  <a href="#" class="product__image">
+                    <div data-gallery class="product__switch image-switch">
+                      <!--Изображение товара-->
+                      <div href="@img/shop/bathrobe1.jpg" class="image-switch__item">
+                        <div class="image-switch__img"><img src="@img/shop/bathrobeMin1.jpg" alt="Изображение товара" /></div>
+                      </div>
+                      <div href="@img/shop/bathrobe2.jpg" class="image-switch__item">
+                        <div class="image-switch__img"><img src="@img/shop/bathrobeMin2.jpg" alt="Изображение товара" /></div>
+                      </div>
+                    </div>
+                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
+                  </a>
+                  <!--Название товара-->
+                  <h3 class="product__title">
+                    <a href="#">Махровый халат изготавливается из&nbsp;натуральной ткани (хлопковой) с&nbsp;ворсистой поверхностью.</a>
+                  </h3>
+                 
+                  <div class="product__info">
+                    <!--Описание товара-->
+                    <span class="product__term">Артикул: WR-001 </span>
+                    <span class="product__term">Цвет: Белый</span>
+										<span class="product__term">Размер: 46-56</span>
+										<span class="product__term">Материал: Двухсторонняя махра, двойная нить в&nbsp;петле, хлопок 100%</span>
+                  </div>
+                  <div class="product__price product-price">
+										<span class="product__price__tetx">Цена:</span>
+                    <!--Цена товара-->
+                    <span class="product-price__current marketing-yellow">3000 ₽</span>
+                   </div>
+                  <button class="product__btn">Добавить в корзину</button>
+                </article>
+              </li>
+              <!-- ----------------------------------------------------Копировать до этого текста-------------------------------------------- -->
+
+              <!--Карточка товара-->
+							<li class="products-grid__item">
+                <article class="product card">
+                  <a href="#" class="product__image">
+                    <div  data-gallery class="product__switch image-switch">
+                      <!--Изображение товара-->
+                      <div href="@img/shop/hoody1.jpg" class="image-switch__item">
+                        <div class="image-switch__img"><img src="@img/shop/hoodyMin1.jpg" alt="Изображение товара" /></div>
+                      </div>
+                      <div href="@img/shop/hoody2.jpg" class="image-switch__item">
+                        <div class="image-switch__img"><img src="@img/shop/hoodyMin2.jpg" alt="Изображение товара" /></div>
+                      </div>
+                    </div>
+                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
+                  </a>
+                  <!--Название товара-->
+                  <h3 class="product__title">
+                    <a href="#">Стильная и&nbsp;теплая толстовка&nbsp;&mdash; универсальная и&nbsp;практичная вещь, способная заменить любую одежду.</a>
+                  </h3>
+                 
+                  <div class="product__info">
+                    <!--Описание товара-->
+                    <span class="product__term">Артикул: ВТ-001 </span>
+                    <span class="product__term">Цвет: Черный</span>
+										<span class="product__term">Размер: M-XL</span>
+										<span class="product__term">Материал: 100% хлопок, мягкий теплый начес внутри</span>
+                  </div>
+                  <div class="product__price product-price">
+										<span class="product__price__tetx">Цена:</span>
+                    <!--Цена товара-->
+                    <span class="product-price__current marketing-yellow">2500 ₽</span>
+                   </div>
+                  <button class="product__btn">Добавить в корзину</button>
+                </article>
+              </li>
+							<li class="products-grid__item">
+                <article class="product card">
+                  <a href="#" class="product__image">
+                    <div data-gallery class="product__switch image-switch">
+                      <div href="@img/shop/t-shirt1.jpg" class="image-switch__item">
+                        <div class="image-switch__img"><img src="@img/shop/t-shirtMin1.jpg" alt="Изображение товара" /></div>
+                      </div>
+                      <div href="@img/shop/t-shirt2.jpg" class="image-switch__item">
+                        <div class="image-switch__img"><img src="@img/shop/t-shirtMin2.jpg" alt="Изображение товара" /></div>
+                      </div>
+                    </div>
+                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
+                  </a>
+                  <h3 class="product__title">
+                    <a href="#">Футболка</a>
+                  </h3>
+                 
+                  <div class="product__info">
+                    <span class="product__term">Артикул: ВТ-002 </span>
+                    <span class="product__term">Цвет: Черный</span>
+										<span class="product__term">Размер: M-XL</span>
+									 </div>
+                  <div class="product__price product-price">
+										<span class="product__price__tetx">Цена:</span>
+                    <span class="product-price__current marketing-yellow">1000 ₽</span>
+                   </div>
+                  <button class="product__btn">Добавить в корзину</button>
+                </article>
+              </li>
+							<li class="products-grid__item">
+                <article class="product card">
+                  <a href="#" class="product__image">
+                    <div data-gallery class="product__switch image-switch">
+                      <div href="@img/shop/thermocup.jpg"  class="image-switch__item">
+                        <div class="image-switch__img"><img src="@img/shop/thermocupMin.jpg" alt="Изображение товара" /></div>
+                      </div>
+                    </div>
+                    <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
+                  </a>
+                  <h3 class="product__title">
+                    <a href="#">Сохраняет тепло напитка в&nbsp;течение часа и&nbsp;не&nbsp;позволяет жидкости проливаться во&nbsp;время поездок и&nbsp;прогулок.</a>
+                  </h3>
+                 
+                  <div class="product__info">
+                    <span class="product__term">Артикул: ВС-001 </span>
+                    <span class="product__term">Детали: объем&nbsp;&mdash; 350&nbsp;мл, герметичная крышка</span>
+									</div>
+                  <div class="product__price product-price">
+										<span class="product__price__tetx">Цена:</span>
+                    <span class="product-price__current marketing-yellow">500 ₽</span>
+                   </div>
+                  <button class="product__btn">Добавить в корзину</button>
+                </article>
+              </li>
+              <!-- --------------------------------------------Новую карточку вставлять под этот текст--------------------------------------------------------------- -->
+						</ul>
+          </div>
+          </div>
+      </main>
+			
+      @@include('html/_footer.htm',{})
+    </div>
+		<script src="files/simplebar.js"></script>
+    <script src="files/modal.js"></script>
+    <script src="files/product.js"></script>
+    <script src="files/fixed-block.js"></script>
+    <script src="files/cart.js"></script>
+		@@include('html/_popup.htm',{})
+    @@include('html/_preloader.htm',{})
+	  @@include('html/_js.htm',{}) 
+ </body>
+</html>
