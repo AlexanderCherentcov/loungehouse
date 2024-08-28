@@ -1,0 +1,25 @@
+.calendar {
+  background-color: var(--black);
+  // .calendar__container
+
+  &__container {
+    height: rem(700);
+  }
+
+  // .calendar__title
+
+  &__title {
+    margin-bottom: rem(40);
+    color: var(--white);
+  }
+
+  // .calendar__content
+
+  &__content {
+   
+  }
+}
+.padding-section {
+}
+.title-section {
+}

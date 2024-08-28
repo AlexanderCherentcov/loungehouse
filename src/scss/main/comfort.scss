@@ -1,0 +1,176 @@
+.comfort {
+  // .comfort__container
+
+  &__container {
+  }
+
+  // .comfort__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(38);
+    margin-bottom: rem(38);
+    @media (max-width:$mobile){
+       align-items: flex-start; 
+    }
+  }
+
+  // .comfort__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: rem(50);
+    
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
+
+.content-comfort {
+  // .content-comfort__title
+
+  &__title {
+    align-self: center;
+  }
+
+  // .content-comfort__text
+
+  &__text {
+    color: var(--black);
+    text-align: center;
+    @media (max-width:$mobile){
+       text-align: left; 
+    }
+   }
+}
+
+.list-comfort {
+  // .list-comfort__items
+
+  &__items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: span 6;
+    gap: rem(20);
+    padding-left: 20%;
+    
+    @media (max-width:$mobileSmall){
+       padding-left: 0; 
+       gap: rem(10);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      width: rem(64);
+      height: rem(64);
+      
+      @media (max-width:$mobileSmall){
+         display: none; 
+      }
+    }
+
+    &:nth-child(1) {
+      &::before {
+        background-image: url("@img/comfort/wi-fi.svg");
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        background-image: url("@img/comfort/bathhouse.svg");
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        background-image: url("@img/comfort/parking.svg");
+      }
+    }
+
+    &:nth-child(4) {
+      &::before {
+        background-image: url("@img/comfort/comfort.svg");
+      }
+    }
+
+    &:nth-child(5) {
+      &::before {
+        background-image: url("@img/comfort/game.svg");
+      }
+    }
+
+    &:nth-child(6) {
+      &::before {
+        background-image: url("@img/comfort/book.svg");
+      }
+    }
+
+    &:nth-child(7) {
+      &::before {
+        background-image: url("@img/comfort/location.svg");
+      }
+    }
+
+    &:nth-child(8) {
+      &::before {
+        background-image: url("@img/comfort/meal.svg");
+      }
+    }
+
+    &:nth-child(9) {
+      &::before {
+        background-image: url("@img/comfort/grill.svg");
+      }
+    }
+
+    &:nth-child(10) {
+      &::before {
+        background-image: url("@img/comfort/discount.svg");
+      }
+    }
+
+    &:nth-child(11) {
+      &::before {
+        background-image: url("@img/comfort/palm.svg");
+      }
+    }
+
+    &:nth-child(12) {
+      &::before {
+        background-image: url("@img/comfort/24.svg");
+      }
+    }
+  }
+
+  // .list-comfort__title
+
+  &__title {
+    font-size: rem(28);
+    line-height: rem(34);
+    font-weight: 800;
+    color: var(--black);
+
+    @media (max-width: $tablet) {
+      font-size: rem(20);
+    }
+  }
+
+  // .list-comfort__text
+
+  &__text {
+    color: var(--black);
+  }
+}

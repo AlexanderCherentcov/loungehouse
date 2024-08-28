@@ -1,0 +1,317 @@
+.header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--black);
+ 
+
+  @media (max-width: em(1230)) {
+    opacity: 1;
+  }
+  // .header__container
+
+  &__container {
+  }
+
+  // .header__content
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(10);
+    padding: rem(10) 0;
+  }
+
+  // .header__menu
+
+  &__menu {
+    display: none;
+    @media (max-width: em(1230)) {
+      display: block;
+    }
+  }
+}
+.content-header {
+  // .content-header__logo
+
+  &__logo {
+    position: relative;
+    z-index: 10;
+    transition: transform .3s ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    img {
+      max-width: rem(120);
+    }
+  }
+
+  // .content-header__nav
+
+  &__nav {
+    @media (max-width: em(1230)) {
+      @include adaptiveValue("padding-top", 150, 250, 650, 320, 1);
+    }
+  }
+
+  // .content-header__contacts
+
+  &__contacts {
+ 
+  }
+}
+.nav-content {
+  // .nav-content__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(40);
+
+    @media (max-width: em(1230)) {
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      padding: rem(30) rem(30) rem(30) rem(30);
+    }
+  }
+
+  // .nav-content__item
+
+  &__item {
+    font-size: rem(16);
+  }
+
+  // .nav-content__link
+
+  &__link {
+  }
+}
+
+.contacts-content {
+  // .contacts-content__tel
+
+  &__tel {
+  }
+
+  // .contacts-content__number
+
+  &__number {
+  }
+
+  // .contacts-content__mail
+
+  &__mail {
+  }
+
+  // .contacts-content__e-mail
+
+  &__e-mail {
+  }
+
+  // .contacts-content__adress
+
+  &__adress {
+  }
+
+  // .contacts-content__adr
+
+  &__adr {
+  }
+}
+
+.menu {
+  // .menu__icon
+
+  &__icon {
+  }
+
+  // .menu__body
+
+  &__body {
+    @media (max-width: em(1230)) {
+      position: fixed;
+      z-index: 2;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: -100%;
+      overflow: auto;
+      background-color: var(--black);
+      opacity: 1;
+      transition: left 0.3s ease;
+      &::before {
+        content: "";
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        height: 120px;
+        top: -100%;
+        background-color: var(--black);
+        opacity: 1;
+      }
+
+      .menu-open & {
+        left: 0;
+        &::before {
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.nav-content {
+
+  // .nav-content__item
+
+  &__item {
+  }
+}
+.content-header {
+
+  // .content-header__spollers
+
+  &__spollers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rem(40);
+  }
+
+  // .content-header__item
+
+  &__item {
+  }
+
+  // .content-header__btn
+
+  &__btn {
+    transition: color 0.3s ease-in-out;
+  
+
+    &:active, &:hover {
+    color: var(--Yellow-Sea);
+  }
+  }
+
+  // .content-header__contacts
+
+  &__contacts {
+    position:absolute;
+    padding: rem(15);
+    border-radius: rem(30);
+    border: 1px solid var(--white);
+    background-color: var(--black);
+  }
+}
+.spollers {
+
+  // .spollers__item
+
+  &__item {
+  }
+
+  // .spollers__title
+
+  &__title {
+  }
+
+  // .spollers__body
+
+  &__body {
+  }
+}
+.contacts-content {
+
+  // .contacts-content__tel
+
+  &__tel {
+  }
+
+  // .contacts-content__number
+
+  &__number {
+  }
+
+  // .contacts-content__mail
+
+  &__mail {
+  }
+
+  // .contacts-content__e-mail
+
+  &__e-mail {
+  }
+
+  // .contacts-content__adress
+
+  &__adress {
+  }
+  
+
+  // .contacts-content__adr
+
+  &__adr {
+    cursor: pointer;
+  }
+}
+
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+  @media (max-width: em(1230)) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    z-index: 5;
+    @media (any-hover: none) {
+      cursor: default;
+    }
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: var(--white);
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

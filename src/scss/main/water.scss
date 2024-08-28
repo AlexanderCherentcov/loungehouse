@@ -1,0 +1,98 @@
+.water {
+
+  // .water__container
+
+  &__container {
+  }
+
+  // .water__title
+
+  &__title {
+    margin-bottom: rem(40);
+    color: var(--white);
+  }
+
+  // .water__content
+
+  &__content {
+    margin-bottom: rem(30);
+  }
+}
+
+.content-water {
+
+  // .content-water__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(50);
+  }
+}
+.list-water {
+
+  // .list-water__item
+
+  &__item {
+   padding-bottom: rem(10);
+    border-bottom: 2px solid var(--white);
+  }
+
+  // .list-water__title
+
+  &__title {
+  }
+
+  // .list-water__text
+
+  &__text {
+  }
+
+  // .list-water__img
+
+  &__img {
+    display: block;
+    width: 100%;
+    max-height: rem(600);
+    object-fit: cover;
+  }
+
+  // .list-water__info
+
+  &__info {
+  }
+
+  // .list-water__information
+
+  &__information {
+    padding-left: rem(50);
+  }
+}
+.marketing-item {
+}
+.marketing-title {
+}
+.marketing-text {
+}
+.span {
+}
+.marketing-info {
+}
+.information-list {
+
+  // .information-list__item
+
+  &__item {
+    list-style: disc;
+    
+  }
+
+  // .information-list__text
+
+  &__text {
+  }
+}
+.marketing-yellow {
+}

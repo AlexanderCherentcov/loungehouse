@@ -1,0 +1,283 @@
+.title-section {
+  font-size: rem(40);
+  line-height: rem(48);
+  font-weight: 800;
+  color: var(--black);
+  text-align: center;
+}
+
+.padding-section {
+  padding: rem(40) 0 rem(40) 0;
+}
+
+.link {
+  min-width: rem(284);
+  padding: rem(20) rem(60);
+  border-radius: rem(32);
+  background-color: var(--Tory-Blue);
+  color: var(--white);
+  font-size: rem(20);
+  line-height: rem(24);
+  text-align: center;
+  transition: scale 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--Yellow-Sea);
+    scale: 1.2;
+  }
+}
+
+a {
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--Yellow-Sea);
+  }
+}
+
+.list-tippy {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: rem(15);
+  @media (max-width: $mobileSmall) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .item-tippy {
+    grid-column: span 1;
+    svg {
+      width: rem(35);
+      height: rem(25);
+      fill: var(--white);
+      transition: fill 0.3s ease-in-out;
+
+      &:hover {
+        fill: #a9a9a9;
+      }
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: rem(25);
+  border: 3px solid var(--white);
+  border-radius: rem(48);
+  box-shadow: 0px 1px 50px 10px rgba(255, 255, 255, 0.25);
+  gap: rem(15);
+}
+.card-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 1 100%;
+  gap: rem(10);
+  margin-bottom: rem(20);
+}
+.card-item {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  width: 100%;
+  gap: rem(15);
+  padding-bottom: rem(10);
+  border-bottom: 1px solid var(--white);
+}
+
+// Стили карточек рекламы
+.marketing-section {
+  padding: rem(130) 0 rem(70) 0;
+  background-color: var(--Cod-Gray);
+}
+
+.marketing-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: rem(30);
+}
+
+.marketing-title {
+  font-size: rem(24);
+  font-weight: 600;
+  text-align: center;
+}
+
+.marketing-info {
+  font-size: rem(12);
+  line-height: rem(15);
+  font-weight: 600;
+  margin-top: rem(-20);
+}
+
+.marketing-text {
+  font-size: rem(16);
+  line-height: rem(25);
+  text-align: center;
+}
+
+.marketing-white {
+  font-weight: 600;
+  color: var(--white);
+}
+.marketing-yellow {
+  font-weight: 600;
+  color: var(--Yellow-Sea);
+}
+
+@media (max-width: $tablet) {
+  body {
+    font-size: rem(14);
+    line-height: rem(20);
+  }
+
+  .title-section {
+    font-size: rem(30);
+  }
+
+  .link {
+    font-size: rem(16);
+  }
+}
+
+p,
+div,
+span {
+  line-height: rem(24);
+}
+
+.mb {
+  margin-bottom: rem(20);
+}
+
+.error-form {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: rem(5);
+  color: red;
+}
+
+.sent-popup__content,
+.error-popup__content {
+  transform: none;
+  visibility: inherit;
+  color: var(--black);
+  background-color: var(--white);
+  padding: rem(25);
+  border: 3px solid var(--black);
+  border-radius: rem(48);
+  text-align: center;
+
+  .lock & {
+    visibility: inherit;
+  }
+}
+
+.sent-popup,
+.error-popup {
+  z-index: 1000;
+}
+
+.form-close {
+  margin-bottom: rem(20);
+}
+
+.white {
+  color: var(--white);
+}
+
+.btn-lessons {
+  position: fixed;
+  display: block;
+  min-width: rem(150);
+  padding: rem(15);
+  z-index: 10;
+  top: 30%;
+
+  @media (max-width: $tablet) {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: rem(150);
+    margin: 0 auto;
+  }
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: rem(30);
+  // .social-list__item
+
+  &__item {
+  }
+
+  // .social-list__link
+
+  &__link {
+    display: block;
+    transition: transform 0.3s ease-in-out;
+    svg {
+      width: rem(80);
+      height: rem(60);
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .viber {
+    svg {
+      fill: #9179ee;
+      transform: scale(1.2);
+    }
+  }
+
+ 
+}
+
+.popup__close {
+  font-size: rem(20);
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+
+.whatsapp {
+  svg {
+    fill: #67c15e;
+  }
+}
+
+.telegram {
+  svg {
+    fill: #007dbb;
+    stroke: var(--white);
+  }
+}
+
+.display-none {
+  display: none;
+
+  @media (max-width:$mobile){
+     display: inline-block; 
+  }
+}
+
+.display-style {
+  
+  @media (max-width:$mobile){
+     display: none; 
+  }
+}
